@@ -1,5 +1,5 @@
 
-public class SavingsAccount {
+public class SavingsAccount implements IAccountService{
 
 	//fields or instance variables or non-static variables
 	int accountNo;
@@ -39,7 +39,7 @@ public class SavingsAccount {
 	
 	// instance methods or non-static methods
 	// withdraw(int)
-	void withdraw(int withdrawalAmount) {
+	public void withdraw(int withdrawalAmount) {
 
 		//business logic
 		if(this.status == "active"){
@@ -58,7 +58,7 @@ public class SavingsAccount {
 	}
 	
 	//withdraw(int,int)
-	void withdraw(int withdrawalAmount,int pin) {
+	public void withdraw(int withdrawalAmount,int pin) {
 		
 		if (this.pin == pin) {
 			
@@ -79,7 +79,7 @@ public class SavingsAccount {
 	
 	
 	
-	void deposit(int depositAmount) {
+	public void deposit(int depositAmount) {
 		
 		if(depositAmount > 0) {
 		

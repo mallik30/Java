@@ -8,4 +8,14 @@ abstract public class Employee {
 	Gender gender;
 	
 	abstract public void calculateSalary();
+	
+	public void getDetails() {
+		
+		System.out.println("Id :"+id);
+		System.out.println("Name :"+name);
+		System.out.println("Email :"+email);
+		
+		
+	}
+	
 }
