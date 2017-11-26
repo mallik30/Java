@@ -3,7 +3,7 @@ public class SavingsAccount implements IAccountService{
 
 	//fields or instance variables or non-static variables
 	int accountNo;
-	float balance;
+	protected float balance;
 	String status;
 	int pin;
 	

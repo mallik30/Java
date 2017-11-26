@@ -6,6 +6,8 @@ public class PermanentEmployee extends Employee{
 	
 	@Override
 	public void calculateSalary() {
-			
+	
+		System.out.println("Contract Employee : calculateSalary()");
+		
 	}
 }
