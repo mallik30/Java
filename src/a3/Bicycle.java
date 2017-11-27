@@ -1,6 +1,8 @@
 package a3;
 
-public class Bicycle {
+import a4.bicycleInterface;
+
+public class Bicycle implements bicycleInterface{
 
 	int gear;
 	int speed;
@@ -16,7 +18,7 @@ public class Bicycle {
 		this.name = name;
 	}
 
-	void changeCadence(int newValue) {
+	public void changeCadence(int newValue) {
 		cadence = newValue;
 
 	}

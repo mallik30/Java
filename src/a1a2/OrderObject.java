@@ -1,6 +1,8 @@
 package a1a2;
 
-public class OrderObject {
+import a4.OrderInterface;
+
+public class OrderObject implements OrderInterface{
 
 	String orderName;    
 	int orderNumber; 
@@ -27,7 +29,7 @@ public OrderObject(String orderName, int orderNumber, String customerName, doubl
 		
 	}
 	//method(int)
-	void cashPayment(double cash) {
+	public void cashPayment(double cash) {
 		
 		if(cash >= this.orderPrice) {
 		
@@ -44,7 +46,7 @@ public OrderObject(String orderName, int orderNumber, String customerName, doubl
 		}	
 	}
 	//method(int,int)				//method overloading
-	void ccPayment(int pin, int balance) {
+	public void ccPayment(int pin, int balance) {
 		
 		if(this.pin == pin) {	
 			
@@ -59,7 +61,7 @@ public OrderObject(String orderName, int orderNumber, String customerName, doubl
 		}
 	}
 	//method(int)
-	void ccPayment(int balance) {
+	public void ccPayment(int balance) {
 		
 		if(this.orderPrice <= balance) {
 			
