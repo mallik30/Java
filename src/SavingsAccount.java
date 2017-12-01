@@ -3,11 +3,13 @@ public class SavingsAccount implements IAccountService{
 
 	//fields or instance variables or non-static variables
 	int accountNo;
-	protected float balance;
+	private float balance;
 	String status;
-	int pin;
+	private int pin;
 	
 	final static float interestRate =	2.25f;
+	
+	AccountOwner accountOwner;
 	
 	//default constructor 
 	public SavingsAccount() {
@@ -22,8 +24,7 @@ public class SavingsAccount implements IAccountService{
 		this.status = status;
 		this.pin = pin;
 	}
-
-	
+		
 	public float getBalance() {
 		return balance;
 	}
@@ -32,6 +33,13 @@ public class SavingsAccount implements IAccountService{
 		System.out.println("AccountNo : "+accountNo+"\nBalance : "+balance+"\nStatus : "+status);
 	}
 	
+	public boolean isPinValid(int pin) {
+		if(this.pin == pin) {
+			return true;			
+		}
+		return false;
+		
+	}
 	
 	public static float getInterestrate() {
 		return interestRate;
@@ -60,7 +68,7 @@ public class SavingsAccount implements IAccountService{
 	//withdraw(int,int)
 	public void withdraw(int withdrawalAmount,int pin) {
 		
-		if (this.pin == pin) {
+		if (isPinValid(pin)) {
 			
 			if(withdrawalAmount <= 40000) {
 				

@@ -10,12 +10,12 @@ public class JuniorSavingsAccount extends SavingsAccount{
 	
 	void printDetails () {		
 		System.out.println("Account No: "+accountNo);
-		System.out.println("Balance : "+balance);
+		System.out.println("Balance : "+getBalance());
 	}
 	
 	@Override
 	public void withdraw(int withdrawalAmount, int pin) {
-		if (this.pin == pin) {
+		if (isPinValid(pin)) {
 			
 			if(withdrawalAmount <= 10000) {
 				
