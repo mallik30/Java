@@ -1,5 +1,5 @@
 
-public class SavingsAccount implements IAccountService{
+public class SavingsAccount extends Object implements IAccountService{
 
 	//fields or instance variables or non-static variables
 	int accountNo;

@@ -1,5 +1,5 @@
 
-public class TestBicycle {
+public class TestBicycle extends Object{
 
 	public static void main(String[] args) {
 		

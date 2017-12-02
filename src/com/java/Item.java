@@ -5,11 +5,28 @@ public class Item {
 	private int id;
 	private String name;
 	private float price;
+
+	private Bid[] bids;
 	
 	public Item() {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public Item(int id, String name, float price) {
+		setId(id);
+		setName(name);
+		setPrice(price);
+	}
+
+	public void setBids(Bid[] bids) {
+		this.bids = bids;
+	}
+	
+	public Bid[] getBids() {
+		return bids;
+	}
+	
 	public int getId() {
 		return id;
 	}
