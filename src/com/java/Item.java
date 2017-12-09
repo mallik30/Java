@@ -19,6 +19,25 @@ public class Item {
 		setPrice(price);
 	}
 
+	@Override
+	public String toString() {
+
+		return "Id : "+id+"\nName : "+name+"\nPrice : "+price;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+		Item item2 = (Item)obj; 
+		
+		if(item2 != null) {
+			if(this.id == item2.id && this.name.equals(item2.name) && this.price == item2.price) {
+				return true;
+			}
+		}	
+		return false;
+	}
+	
 	public void setBids(Bid[] bids) {
 		this.bids = bids;
 	}
