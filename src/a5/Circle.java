@@ -1,6 +1,6 @@
 package a5;
-
-public class Circle {
+//main class
+public class Circle implements CircleProperties{
 	
 	double area;
 	double circumference;
