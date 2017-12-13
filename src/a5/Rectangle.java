@@ -3,10 +3,20 @@ package a5;
 public class Rectangle extends Circle{
 
 	double areaOfRectangle;
+	int height;
 	
-	public double rectangleArea(int height, double circumference) {
+	public Rectangle(int radius, int height) {
+		super(radius);
+		this.height = height;
+	}
+
+
+
+	public double rectangleArea(int h, double circumference) {
 		
-		areaOfRectangle = height * circumference;
+		height = h;
+		
+		areaOfRectangle = h * circumference;
 		
 		return areaOfRectangle;
 		

@@ -1,6 +1,6 @@
 package com.java;
 
-public class Item {
+public class Item implements Cloneable{
 
 	private int id;
 	private String name;
@@ -19,6 +19,11 @@ public class Item {
 		setPrice(price);
 	}
 
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+	
 	@Override
 	public String toString() {
 

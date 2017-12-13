@@ -1,19 +1,18 @@
 package a5;
 
-public class Cylinder {
+public class Cylinder extends Rectangle{
+		
+	double areaOfCylinder;
+		
+	public Cylinder(int radius, int height) {
+		super(radius, height);
+	}
 
-	public static void main(String[] args) {
+	public double cylinderArea() {
+			
+		areaOfCylinder = 2 * circleArea(radius)+ rectangleArea(height, circleCircumference(radius));
 		
-		double areaOfCylinder;
-		
-		Circle circle = new Circle();			
-		
-		Rectangle rectangle = new Rectangle();
-		
-		areaOfCylinder = 2 * circle.circleArea(2)+ rectangle.rectangleArea(6, circle.circleCircumference(2));
-		
-		System.out.println("Area of Cylinder : "+areaOfCylinder);
-		
+		return areaOfCylinder; 
 	}
 			
 		
