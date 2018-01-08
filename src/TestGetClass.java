@@ -17,8 +17,9 @@ public class TestGetClass {
 //		
 //		Class class1 = item1.getClass();
 //		
-//		System.out.println("Class Name : "+class1.getName());
-//		System.out.println();
+////		System.out.println("Class Name : "+class1.getName());
+////		System.out.println();
+//		
 //		System.out.println(" Methods List: ");
 //	
 //		Method[] methodArr = class1.getMethods();

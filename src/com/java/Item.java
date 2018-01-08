@@ -19,16 +19,28 @@ public class Item implements Cloneable{
 		setPrice(price);
 	}
 
+		
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
 	
+		
 	@Override
 	public String toString() {
 
 		return "Id : "+id+"\nName : "+name+"\nPrice : "+price;
 	}
+	
+	//my own equals method that works
+//	@Override
+//	public boolean equals(Object obj) {
+//		
+//			if(this.id == getId() && this.name.equals(getName()) && this.price == getPrice()) {
+//				return true;
+//			}
+//		return false;
+//	}
 	
 	@Override
 	public boolean equals(Object obj) {
